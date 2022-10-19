@@ -5,6 +5,7 @@ on:
     paths:
       - 'factorial.py'
       - 'lint_test.py'
+      - '*.yml'
 
 jobs:
   integration-test:
