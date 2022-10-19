@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Test OS and branch/repository.
         run: echo "This job is now running on ${{ runner.os }} server hosted by GitHub."
-      - name:
+      - name: YO MAMA
         run: echo "The name of this branch is ${{ github.ref }} in repository ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v2
