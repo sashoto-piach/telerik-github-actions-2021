@@ -2,24 +2,18 @@ name: Python-Linter
 on:
   push:
     branches: [ 2022-10-19-wip ]
-    paths:
-      - 'factorial.py'
-      - 'lint_test.py'
 
 jobs:
   integration-test:
     runs-on: ubuntu-latest
     container:
       image: python:3.9-alpine
-      options: |
-        --cups 1
+      options: --cups 1
       steps:
         - name: Checkout repo
           uses: actions/checkout@v2
         - name: Run python factorial
           run: python factorial.py
-
-
 
   lint:
     runs-on: ubuntu-latest
