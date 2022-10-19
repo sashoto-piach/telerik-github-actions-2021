@@ -39,4 +39,4 @@ jobs:
           echo "Deploying to our imaginary cluster"
           sleep 60
           echo "App has been deployed successfully"
-      - run:
+      
