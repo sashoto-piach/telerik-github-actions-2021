@@ -15,9 +15,9 @@ jobs:
       options: |
         --cups 1
       steps:
-        -name: Checkout repo
+        - name: Checkout repo
           uses: actions/checkout@v2
-        -name: Run python factorial
+        - name: Run python factorial
           run: python factorial.py
 
 
