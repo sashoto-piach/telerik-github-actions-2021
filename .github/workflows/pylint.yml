@@ -9,11 +9,11 @@ jobs:
     container:
       image: python:3.9-alpine
       options: --cups 1
-      steps:
-        - name: Checkout repo
-          uses: actions/checkout@v2
-        - name: Run python factorial
-          run: python factorial.py
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run python factorial
+        run: python factorial.py
 
   lint:
     runs-on: ubuntu-latest
