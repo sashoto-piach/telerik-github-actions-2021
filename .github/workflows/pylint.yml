@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: python:3.9-alpine
-      options: --cups 1
+      options: --cpus 1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
