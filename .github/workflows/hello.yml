@@ -1,0 +1,10 @@
+name: Hello-Workflow
+on: [push]
+jobs:
+  build:
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "This job is automatically triggered by a ${{ github.event_name }} event."
+      - run: pwd
+      - run: ls -ltr
