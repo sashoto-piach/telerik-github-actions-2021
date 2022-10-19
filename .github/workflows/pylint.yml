@@ -2,6 +2,9 @@ name: Python-Linter
 on:
   push:
     branches: [ 2022-10-19-wip ]
+    paths:
+      - 'factorial.py'
+      - 'lint_test.py'
 
 jobs:
   integration-test:
