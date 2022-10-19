@@ -1,12 +1,12 @@
 name: Python-Linter
 on:
   push:
-    branches: [ origin/2022-10-19-wip ]
+    branches: [ 2022-10-19-wip ]
     paths:
       - 'factorial.py'
       - 'lint_test.py'
 
-job:
+jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
