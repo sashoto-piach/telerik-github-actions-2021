@@ -1,7 +1,7 @@
 name: Python-Linter
 on:
   push:
-    branches: [2022-10-19-wip]
+    branches: [ 2022-10-19-wip ]
     paths:
       - 'factorial.py'
       - 'lint_test.py'
@@ -33,4 +33,9 @@ job:
           echo "Building docker container..."
           sleep 60
           echo "Docker container built successfully"
-      - name:
+      - name: Deploy
+        run: |
+          echo "Deploying to our imaginary cluster"
+          sleep 60
+          echo "App has been deployed successfully"
+      - run:
