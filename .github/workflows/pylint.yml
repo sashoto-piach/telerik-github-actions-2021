@@ -1,0 +1,50 @@
+name: Python-Linter
+on:
+  push:
+    branches: [ 2022-10-19-wip ]
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.9-alpine
+      options: --cpus 1
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run python factorial
+        run: python factorial.py
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test OS and branch/repository.
+        run: echo "This job is now running on ${{ runner.os }} server hosted by GitHub."
+      - name: YO MAMA
+        run: echo "The name of this branch is ${{ github.ref }} in repository ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Echo
+        run: echo "This ${{ github.repository }} had been cloned to the runner"
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+      - name: Lint with pyLint
+        run: |
+          python lint_test.py
+      - name: Build container
+        run: |
+          echo "Building docker container..."
+          sleep 2
+          echo "Docker container built successfully"
+      - name: Deploy
+        run: |
+          echo "Deploying to our imaginary cluster"
+          sleep 60
+          echo "App has been deployed successfully"
+      
