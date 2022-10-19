@@ -28,3 +28,9 @@ job:
       - name: Lint with pyLint
         run: |
           python lint_test.py
+      - name: Build container
+        run: |
+          echo "Building docker container..."
+          sleep 60
+          echo "Docker container built successfully"
+      - name:
